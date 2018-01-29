@@ -159,7 +159,7 @@ end
 
 class RspecHtmlReporter < RSpec::Core::Formatters::BaseFormatter
 
-  DEFAULT_REPORT_PATH = File.join(Bundler.root, 'reports', Time.now.strftime('%Y%m%d-%H%M%S'))
+  DEFAULT_REPORT_PATH = File.join(::Bundler.root, 'reports', Time.now.strftime('%Y%m%d-%H%M%S'))
   REPORT_PATH = ENV['REPORT_PATH'] || DEFAULT_REPORT_PATH
 
   SCREENRECORD_DIR = File.join(REPORT_PATH, 'screenrecords')
